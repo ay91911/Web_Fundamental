@@ -1,0 +1,38 @@
+<!--step02_selector2.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector2</title>
+    <style>
+        .container{
+            background-color: beige;
+        }
+        /*
+        .container p => .container의 자손중에서 p요소 선택==>보통 이것만 씀
+        .container > p => .container의 자식중에서 p요소 선택
+        .container + p => .container의 형제중에서 바로 인접한 p요소 선택
+        해당 클래스 위에 있는 건 고려안함.
+        .container ~ p => .container의 모든 형제의 p요소 선택
+        */
+        .container~p{
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <p>I am student</p>
+    <div class="container">
+        <p>I am student</p>
+        <div>
+            <p>I am student</p>
+        </div>
+    </div>
+    <p>I am student</p>
+    <p>I am student</p>
+    <p>I am student</p>
+    <p>I am student</p>
+</body>
+</html>
