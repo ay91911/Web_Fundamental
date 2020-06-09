@@ -1,0 +1,56 @@
+<!--step03_border.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+        }
+        .box1{
+            border-width: 10px;
+            border-style: solid;
+            border-color: blue;
+            padding: 10px;
+            margin: 10px;
+        }
+        .box2{
+            border: 10px solid blue;
+            padding: 10px;
+            margin: 10px;
+        }
+        .box3{
+            border-top-width: 5px;
+            border-right-width: 10px;
+            border-bottom-width: 15px;
+            border-left-width: 20px;
+
+            border-top-style:solid;
+            border-right-style: dotted;
+            border-bottom-style: double;
+            border-left-style: dashed;
+
+            border-top-color: blue;
+            border-right-color: blueviolet;
+            border-left-color: burlywood;
+            border-left-color: chartreuse;
+        }
+        .box4{
+            border-width: 5px 10px 15px 20px;
+            border-style: solid dotted double dashed;
+            border-color: blue blueviolet burlywood chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Border Style</h1>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>    
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+</body>
+</html>
