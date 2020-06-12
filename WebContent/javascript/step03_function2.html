@@ -1,0 +1,61 @@
+<!--step03_function2.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function2</title>
+  <script>
+    //생성자 함수(object를 동적으로 표현하기 위해)->object type
+    const Student = function(name, korean, math){
+      this.name=name;
+      this.korean= korean;
+      this.math= math;
+      this.getSum = function(){
+        return this.korean + this.math;
+      }
+    }
+
+    const s1 = new Student('유아영',90,90);
+    
+    console.log(s1.name);
+    console.log(s1.getSum());
+    console.log(typeof s1);//object로 나옴. function이 아님.
+    console.log(s1);
+
+    //기존 Student objetct의 확장(prototype을 사용하여)
+    Student.prototype.getAvg = function(){
+      return (this.korean + this.math)/2;
+    }
+    console.log(s1.getAvg());
+
+    // =>object로 표현(값이 확정되어 있는 경우)
+      const s2={
+        "name": "유아영",
+        "korean": 90,
+        "math": 90,
+        "getSum": function(){
+          return this.korean + this.math;
+        }
+      }
+      console.log(typeof s2);
+      console.log(s2);
+
+      let sObj = "    this is the string    ";
+
+      String.prototype.trim = function(){
+          return this.replace(/(^\s*)|(\s*$)/gi,"");
+      }
+    
+      let str = sObj.trim();
+
+      console.log("---------"+str+"--------");
+    
+
+  </script>
+
+</head>
+<body>
+  
+</body>
+</html>

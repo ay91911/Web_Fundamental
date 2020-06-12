@@ -1,0 +1,48 @@
+<!--step03_array.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Literal</title>
+    <script>
+
+        //1.배열 생성 및 할당
+        //const nums = new Array(1,2,3,4);
+        //const nums = Array(1,2,3,4);
+        const nums = [1,2,3,4];
+        const names = ['길동이','철수','영희'];
+        //자바스크립트 배열은 모든 종류의 자료형을 할당할 수 있음.
+        const randoms= [1,'길동이',false];
+
+        console.log(nums.length);
+       
+        //자바스크립트 배열은 가변배열임.
+        nums.push(5); //배열의 마지막에 추가
+        nums[99] = 100; //배열의 특정 인덱스에 추가
+
+        //*join(',')or join('') => 배열에 있는 모든 요소를 문자열로 변경
+        let numsToString = nums.join(',');
+        let numsToString2 = nums.join('');
+        console.log(numsToString);
+        console.log(numsToString2);
+        
+        console.log(nums.length);
+
+
+        //배열 출력
+        for(let i = 0;i<nums.length;i++){
+            console.log(nums[i]);
+        }
+
+        //배열 출력-for of문(자바의 enhanced for문과 동일)
+        for(let value of nums){
+            console.log(value);
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
