@@ -1,0 +1,38 @@
+<!--step04_ajax_jsonp_jquery.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Json Jquery</title>
+    <script type="text/javascript" src="../jquery/jquery-3.5.1.js"></script>
+</head>
+<script>
+   
+
+    $(function(){
+        $('#btn').click(function(){
+            $.ajax({
+                url : 'http://www.acornacademy.co.kr/blockchain/naver_json.jsp',
+                type : 'GET',
+                dataType : 'jsonp',
+                jsonp : 'call',//callback key
+                error : function(){
+                    alert('error');
+                },
+                success : function(obj){//함수이름은 자동으로 생성
+                 
+                    $('#sel').append(JSON.stringify(obj));
+                }
+            });
+            
+        });
+    });
+</script>
+<body>
+    <button id = "btn">가져오기</button>
+    <div id="sel">
+
+    </div>
+</body>
+</html>
